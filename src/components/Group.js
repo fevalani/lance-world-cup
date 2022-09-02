@@ -53,8 +53,8 @@ export default function Group({ name, group, setClassified, classified }) {
 }
 
 const Container = styled.div`
-  width: 350px;
-  height: 350px;
+  width: 230px;
+  height: 230px;
   padding-bottom: 10px;
 
   display: flex;
@@ -69,14 +69,14 @@ const Container = styled.div`
   box-shadow: 2px 2px 15px 0px black;
 
   div:first-child {
-    font-size: 30px;
+    font-size: 20px;
     color: #b2163e;
   }
 `;
 
 const Position = styled.div`
   width: 80%;
-  height: 60px;
+  height: 38px;
   padding: 0 10px;
 
   background-color: rgba(100, 100, 100, 0.5);
@@ -96,7 +96,7 @@ const Position = styled.div`
   align-items: center;
 
   border-radius: 10px;
-  font-size: 25px;
+  font-size: 18px;
 
   box-shadow: 2px 2px 5px 0px black;
 
@@ -116,8 +116,8 @@ const Position = styled.div`
   }
 
   #flag {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 
     margin: 0;
 

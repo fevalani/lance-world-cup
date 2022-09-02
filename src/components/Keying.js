@@ -3,19 +3,19 @@ import styled from "styled-components";
 export default function Keying() {
   return (
     <Container>
-      <RoundOfSixteen></RoundOfSixteen>
+      {/*<RoundOfSixteen></RoundOfSixteen>
       <Quarterfinals></Quarterfinals>
       <Semi></Semi>
       <Finals></Finals>
       <Semi></Semi>
       <Quarterfinals></Quarterfinals>
-      <RoundOfSixteen></RoundOfSixteen>
+      <RoundOfSixteen></RoundOfSixteen>*/}
     </Container>
   );
 }
 const Container = styled.div`
   width: 100%;
-  height: 1000px;
+  height: 300px;
 
   display: flex;
 
