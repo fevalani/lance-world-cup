@@ -1,23 +1,51 @@
-import "./assets/styles/App.css";
+import styled from "styled-components";
+import { useState } from "react";
 
-function App() {
+import GroupGrid from "./components/GroupGrid";
+import Keying from "./components/Keying";
+import background from "./assets/images/background.jpg";
+import logo from "./assets/images/logo.png";
+
+export default function App() {
+  const [classified, setClassified] = useState({
+    A: [],
+    B: [],
+    C: [],
+    D: [],
+    E: [],
+    F: [],
+    G: [],
+    H: [],
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container background={background}>
+      <img src={logo} alt="logo" />
+      <GroupGrid setClassified={setClassified} classified={classified}></GroupGrid>
+      <Keying classified={classified}></Keying>
+    </Container>
   );
 }
 
-export default App;
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url(${(props) => props.background});
+  background-position: center;
+  background-size: cover;
+
+  color: white;
+
+  img {
+    width: 400px;
+
+    margin: 20px 0 80px 0;
+
+    border-radius: 10px;
+  }
+`;
