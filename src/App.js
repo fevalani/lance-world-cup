@@ -46,15 +46,11 @@ export default function App() {
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  background-image: url(${(props) => props.background});
-  background-position: center;
-  background-size: repeat;
 
   color: white;
 

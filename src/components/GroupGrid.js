@@ -31,7 +31,7 @@ const Container = styled.div`
   color: white;
 
   margin: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -11,7 +11,7 @@ export default function Keying({ classified }) {
   const [semi, setSemi] = useState([{}, {}, {}, {}]);
   const [finals, setFinals] = useState([{}, {}, {}, {}]);
   return (
-    <>
+    <Margin>
       <Title>Quem será o grande Campeão?</Title>
       <Container>
         <Final apear={champion[0].name && champion[1].name}>
@@ -120,9 +120,23 @@ export default function Keying({ classified }) {
           <p></p>
         </Rounds>
       </Container>
-    </>
+    </Margin>
   );
 }
+
+const Margin = styled.div`
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Title = styled.div`
   font-size: 25px;
