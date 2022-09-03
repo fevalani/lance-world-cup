@@ -5,6 +5,7 @@ import GroupGrid from "./components/GroupGrid";
 import Keying from "./components/Keying";
 import background from "./assets/images/background.jpg";
 import logo from "./assets/images/logo.png";
+import cuplogo from "./assets/images/cuplogo.png";
 
 export default function App() {
   const [classified, setClassified] = useState({
@@ -37,7 +38,10 @@ export default function App() {
 
   return (
     <Container background={background} classifyTeamIsComplete={classifyTeamIsComplete}>
-      <img id="image" src={logo} alt="logo" />
+      <Logos>
+        <img id="image" src={cuplogo} alt="logo" />
+        <img id="image" src={logo} alt="logo" />
+      </Logos>
       <GroupGrid setClassified={setClassified} classified={classified}></GroupGrid>
       {classifyTeamIsComplete() ? <Keying classified={classified}></Keying> : ""}
     </Container>
@@ -53,11 +57,19 @@ const Container = styled.div`
   align-items: center;
 
   color: white;
+`;
 
-  #image {
+const Logos = styled.div`
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
     width: 250px;
 
-    margin: 30px 0 70px 0;
+    margin: 20px 0 50px 0;
 
     border-radius: 10px;
   }

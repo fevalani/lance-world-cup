@@ -201,6 +201,11 @@ const Final = styled.div`
 
   background-color: rgba(255, 255, 255, 0.7);
 
+  > img {
+    width: 300px;
+    height: 500px;
+  }
+
   > div {
     width: 100%;
     height: 100%;

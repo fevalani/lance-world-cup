@@ -5,7 +5,7 @@ import groups from "../assets/content/groups";
 export default function GroupGrid({ setClassified, classified }) {
   const groupsArray = Object.keys(groups);
   return (
-    <>
+    <Margin>
       <Title>Selecione os 1ᵒˢ, 2ᵒˢ e 3ᵒˢ colocados</Title>
       <Container>
         {groupsArray.map((group, i) => (
@@ -18,9 +18,19 @@ export default function GroupGrid({ setClassified, classified }) {
           ></Group>
         ))}
       </Container>
-    </>
+    </Margin>
   );
 }
+
+const Margin = styled.div`
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Title = styled.div`
   font-size: 20px;
