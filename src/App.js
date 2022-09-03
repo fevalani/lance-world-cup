@@ -18,11 +18,28 @@ export default function App() {
     H: [],
   });
 
+  function classifyTeamIsComplete() {
+    const arr = ["A", "B", "C", "D", "E", "F", "G", "H"];
+    let counter = 0;
+    for (let i = 0; i < arr.length; i++) {
+      const group = arr[i];
+      const groupArr = classified[group];
+      if (groupArr.length === 2) {
+        counter++;
+      }
+    }
+    if (counter === 8) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   return (
-    <Container background={background}>
-      <img src={logo} alt="logo" />
+    <Container background={background} classifyTeamIsComplete={classifyTeamIsComplete}>
+      <img id="image" src={logo} alt="logo" />
       <GroupGrid setClassified={setClassified} classified={classified}></GroupGrid>
-      <Keying classified={classified}></Keying>
+      {classifyTeamIsComplete() ? <Keying classified={classified}></Keying> : ""}
     </Container>
   );
 }
@@ -37,11 +54,11 @@ const Container = styled.div`
 
   background-image: url(${(props) => props.background});
   background-position: center;
-  background-size: cover;
+  background-size: repeat;
 
   color: white;
 
-  img {
+  #image {
     width: 250px;
 
     margin: 30px 0 70px 0;

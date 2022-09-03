@@ -20,6 +20,12 @@ export default function Group({ name, group, setClassified, classified }) {
       group.splice(i, 1);
       group.splice(places.length, 0, selectTeam);
       setPlaces(newPlaces);
+    } else {
+      const selectTeam = group[i];
+      newPlaces.splice(i, 1);
+      group.splice(i, 1);
+      group.push(selectTeam);
+      setPlaces(newPlaces);
     }
   }
 
