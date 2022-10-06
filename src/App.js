@@ -6,6 +6,7 @@ import Keying from "./components/Keying";
 import background from "./assets/images/background.jpg";
 import logo from "./assets/images/logo.png";
 import cuplogo from "./assets/images/cuplogo.png";
+import ShareButton from "./components/ShareButton";
 
 export default function App() {
   const [classified, setClassified] = useState({
@@ -38,6 +39,7 @@ export default function App() {
 
   return (
     <Container background={background} classifyTeamIsComplete={classifyTeamIsComplete}>
+      <ShareButton text="Hello world" />
       <Logos>
         <img id="image" src={cuplogo} alt="logo" />
         <img id="image" src={logo} alt="logo" />
